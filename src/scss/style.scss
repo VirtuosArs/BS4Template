@@ -1,0 +1,128 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
+@import "bootstrap-overrides.scss";
+
+body {
+    color: $primary;
+    background: $gray-600;
+}
+
+// Styling for the navbar
+#mainNav {
+    border-bottom: 1px solid fade-out($gray-900, .9);
+    background-color: $white;
+    @include sans-serif-font;
+    @include transition-all;
+    .navbar-brand {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $primary;
+      @include sans-serif-font;
+      &:focus,
+      &:hover {
+        color: darken($primary, .1);
+      }
+    }
+    .navbar-nav {
+      > li.nav-item {
+         > a.nav-link,
+        > a.nav-link:focus {
+          font-size: .9rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $gray-900;
+          &:hover {
+            color: $primary;
+          }
+          &.active {
+            color: $gray-100 !important;
+            background-color: transparent;
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      border-color: transparent;
+      background-color: transparent;
+      .navbar-brand {
+        color: fade-out($white, .3);
+        &:focus,
+        &:hover {
+          color: $white;
+        }
+      }
+      .navbar-nav > li.nav-item > a.nav-link {
+        padding: 0.5rem 1rem;
+      }
+      .navbar-nav > li.nav-item > a.nav-link,
+      .navbar-nav > li.nav-item > a.nav-link:focus {
+        color: fade-out($white, .3);
+        &:hover {
+          color: $white;
+        }
+      }
+      &.navbar-shrink {
+        border-bottom: 1px solid fade-out($gray-900, .9);
+        background-color: transparent;
+        .navbar-brand {
+          color: $white;
+          &:focus,
+          &:hover {
+            color: darken($white, .1);
+          }
+        }
+        .navbar-nav > li.nav-item > a.nav-link,
+        .navbar-nav > li.nav-item > a.nav-link:focus {
+          color: $white;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  
+
+  // Styling for the masthead
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    background-image: url('../img/header.jpeg');
+    background-position: center center;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.7);
+    @include background-cover;
+    hr {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-weight: 300;
+    }
+    @media (min-width: 768px) {
+      p {
+        font-size: 1.15rem;
+      }
+    }
+    @media (min-width: 992px) {
+      height: 100vh;
+      min-height: 650px;
+      padding-top: 0;
+      padding-bottom: 0;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+    @media (min-width: 1200px) {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+  }
+  

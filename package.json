@@ -1,0 +1,34 @@
+{
+  "name": "bootstrap-gulp-starter-template",
+  "version": "1.0.0",
+  "description": "Starter template for bootstrap4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankush Sankhe",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1",
+    "tether": "^1.4.3",
+    "font-awesome": "4.7.0",
+    "jquery.easing": "^1.4.1",
+    "scrollreveal": "3.3.6"
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-rename": "latest",
+    "gulp-notify": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-plumber": "latest",
+    "browser-sync": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest"
+  }
+}
