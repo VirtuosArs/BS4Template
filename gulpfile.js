@@ -12,6 +12,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+var critical = require('critical');
 
 /* Scripts task */
 gulp.task('scripts', function () {
@@ -129,6 +130,23 @@ gulp.task('browser-sync', function () {
     });
 });
 
+
+gulp.task('critical', function (cb) {
+    critical.generate({
+        inline: true,
+        base: 'dist/',
+        src: 'index.html',
+        dest: 'index-critical.html',
+        minify: true,
+        dimensions: [{
+            height: 667,
+            width: 375
+        }, {
+            height: 900,
+            width: 1200
+        }]
+    });
+});
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function () {
